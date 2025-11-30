@@ -36,4 +36,10 @@ router.get('/:id', async (req, res) => {
   res.json(user);
 });
 
+//get all User
+router.get('/', async (req, res) => {
+  const user = await User.find();
+  res.json(user);
+});
+
 module.exports = router;
